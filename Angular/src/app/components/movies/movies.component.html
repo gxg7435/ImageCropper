@@ -1,0 +1,41 @@
+<div class="jumbotron">
+        <div class="container">
+            <h1>Find a movie</h1>
+            <p>Search for a movie by uploading an image file:</p>
+            
+            <div class="text-center">
+                    <label class="btn btn-default">
+                        Upload Image
+                        <input type="file" hidden (change)="uploadFile($event)">
+                    </label>
+            </div>
+        </div>       
+</div>
+
+<div *ngIf='searchRes' class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Search Results</h3>
+        </div> 
+        <div class="panel-body">
+            <div class="panel-body">
+                    <div>
+                        <div>
+                            <img src="../../../assets/images/{{id}}.jpg">         
+                            <h4>{{title}}</h4>              
+                            <p>{{description}}</p>
+                        </div>
+                        <div>
+                            <div *ngFor="let cast of casts;let i=index" >  
+                                <div *ngIf="i < 3">   
+                                    <p>{{cast.name}}</p>    
+                                </div>
+                            </div>
+                            <p><a class="btn btn-default" routerLink="/movie/{{id}}">Crop Image</a></p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+</div>
+
+
+

@@ -1,0 +1,13 @@
+.cropImage1{
+    width: 720px;
+    height:540px;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+.cropImage2{
+    width: 960px;
+    height:1440px;
+    object-fit: cover;
+}
+
